@@ -1,9 +1,9 @@
 import React from "react";
-import ./weatherAPI.css; 
+import "./weatherAPI.css"; 
 
-const API_KEY = /* insert API key */
+const API_KEY = process.env.REACT_APP_API_KEY
 const UNITS = "Metric"
-const Lang = "en"
+const LANG = "en"
 
 class WeatherAPI extends React.Component {
     constructor(props) {
