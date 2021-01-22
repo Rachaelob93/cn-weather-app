@@ -1,11 +1,10 @@
-import { computeHeadingLevel } from "@testing-library/react";
 import React from "react";
 import "../App.css";
 
 
-const Heading = () => {
+const Heading = ({location}) => {
     return  <div className="headingDiv">
-        <h1 className="heading1">The weather in your chosen location is:</h1>
+        <h1 className="heading1">The weather in your chosen location is: {location}</h1>
     </div>
     
 }
