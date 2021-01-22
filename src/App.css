@@ -2,32 +2,49 @@ body{
   background-color:  #DED7B1 ;
 }
 
-.headingDiv {}
+.headingDiv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
 .heading1{ 
   color:#CC7351;
+  letter-spacing: 1.5px;
 }
 
 .location-input {
   background-color: #9DAB86;
-  padding: 5px;
+  padding: 10px;
   border: none;
   border-radius: 20px;
   margin-right: 10px;
   text-align: center;
+  letter-spacing: 1.5px;
 }
 
 .btn {
   border-radius: 20px;
   border: none;
   background-color: #CC7351;
-  padding: 10px;
+  padding: 5px;
   height: fit-content;
+  letter-spacing: 1.5px;
 }
 
 .searchElementDiv {
   display: flex;
   justify-content: center;
-  margin-top: 50px;
+  margin-top: 20px;
   
+}
+
+.card {
+  margin-top: 20px;
+  letter-spacing: 1.5px;
+  color: #6a5a5a;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
