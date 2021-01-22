@@ -2,7 +2,7 @@ import React from "react";
 
 
 
-const Card = ({ main, wind, sys}) => {
+const Card = ({ main, wind, sys, weather }) => {
     const formatTime = (time) => {
         // Ben took this time solution from stack overflow
         let unix_timestamp = time
@@ -26,11 +26,14 @@ const Card = ({ main, wind, sys}) => {
 
     return (
         <div className="card">
-            <p>Temp: {main.temp}</p>
-            <p>Feels like: {main.feels_like}</p>
-            <p>Wind speed: {wind.speed}</p>
-
-            <p>Sunrise at: {formatTime(sys.sunrise)}</p>
+            <img src={`http://openweathermap.org/img/wn/${weather.icon}@2x.png`} alt="conditions-icon"></img>
+            <p>Conditions: {weather.main}</p>
+            <p>Temp: {main.temp} °c</p>
+            <p>Feels like: {main.feels_like} °c</p>
+            <p>Wind speed: {wind.speed} mph</p>
+            <p>Sunrise at: {formatTime(sys.sunrise)} am</p>
+            <p>Sunset at: {formatTime(sys.sunset)} pm</p>
+            
          </div>
 
     )

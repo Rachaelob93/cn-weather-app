@@ -18,7 +18,7 @@ const App = () => {
 
   const getWeather = () => {
     fetch(
-      `http://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${API_KEY}&units=${UNITS}`
+      `http://api.openweathermap.org/data/2.5/weather?q=${city}&appid=71e789052b6f3cfff86f6ba2c1537ee7&units=${UNITS}`
     )
       .then((response) => response.json())
       .then((data) => setData(data));
@@ -29,13 +29,15 @@ const App = () => {
   return (
     <>
       <div>
+      <Heading location={city} />
         <LocationSearch func={getWeather} inputFunc={setCity} />
-        <Heading location={city} />
         {data.main && (
           <Card 
             main={data.main}
             wind={data.wind}
             sys={data.sys}
+            weather={data.weather[0]}
+            icon={data.weather}
           />
         )}
       </div>
